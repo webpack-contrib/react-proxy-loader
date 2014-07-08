@@ -1,0 +1,37 @@
+{
+  "name": "react-proxy-loader",
+  "version": "0.1.0",
+  "description": "Wraps a react component in a proxy component to enable Hot Module Replacement and Code Splitting.",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "devDependencies": {
+    "bundle-loader": "^0.5.0",
+    "react": "^0.10.0",
+    "jsx-loader": "^0.10.2"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webpack/react-proxy-loader.git"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "async",
+    "hmr",
+    "codesplitting"
+  ],
+  "author": "Tobias Koppers @sokra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webpack/react-proxy-loader/issues"
+  },
+  "homepage": "https://github.com/webpack/react-proxy-loader",
+  "dependencies": {
+    "loader-utils": "^0.2.3"
+  }
+}
