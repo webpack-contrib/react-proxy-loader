@@ -7,7 +7,6 @@
     "example": "example"
   },
   "devDependencies": {
-    "bundle-loader": "^0.5.0",
     "react": "^0.10.0",
     "jsx-loader": "^0.10.2",
     "webpack": "^1.3.1"
@@ -33,6 +32,7 @@
   },
   "homepage": "https://github.com/webpack/react-proxy-loader",
   "dependencies": {
+    "bundle-loader": "^0.5.0",
     "loader-utils": "^0.2.3"
   }
 }
