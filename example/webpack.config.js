@@ -7,10 +7,12 @@ module.exports = {
 		path: path.join(__dirname, "output"),
 		filename: "bundle.js"
 	},
-	resolve: {
+	resolveLoader: {
 		alias: {
 			"react-proxy": path.join(__dirname, "..")
-		},
+		}
+	},
+	resolve: {
 		extensions: ["", ".jsx", ".js"]
 	},
 	module: {
