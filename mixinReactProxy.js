@@ -3,7 +3,7 @@ module.exports = function(desc) {
 	desc.render = function() {
 		var Component = this.state.component;
 		if(Component) {
-			return this.transferPropsTo(Component(this.props.chilren));
+			return this.transferPropsTo(Component(this.props.children));
 		} else if(this.renderUnavailable) {
 			return this.renderUnavailable()
 		} else {
