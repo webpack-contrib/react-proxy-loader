@@ -3,7 +3,9 @@ module.exports = function(desc) {
 	desc.render = function() {
 		var Component = this.state.component;
 		if(Component) {
-			return this.transferPropsTo(Component(this.props.children));
+			return this.transferPropsTo(Component({
+				__ReactProxyOldState: this._oldState
+			}, this.props.children));
 		} else if(this.renderUnavailable) {
 			return this.renderUnavailable()
 		} else {
@@ -17,6 +19,9 @@ module.exports = function(desc) {
 		this._proxyEnsureComponent();
 	};
 	desc.setComponent = function(component) {
+		if(this._renderedComponent) {
+			this._oldState = this._renderedComponent.state;
+		}
 		this.setState({ component: component });
 	};
 	desc._proxyEnsureComponent = function() {

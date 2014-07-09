@@ -51,6 +51,10 @@ module.exports = {
 };
 ```
 
+### Advanced: Keeping state between hot updates
+
+Add the `react-proxy-loader/KeepStateMixin` as mixin to the real component. It's merges the old state (before the update) with the new initial state. This way it's keep the state while hot updating. Note that this only works for the direct child. Nested components doesn't keep their state. You should design your components to be stateless anyway.
+
 # License
 
 MIT (http://www.opensource.org/licenses/mit-license.php)
