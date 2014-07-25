@@ -12,7 +12,7 @@ Wraps a react component in a proxy component to enable Code Splitting (loads a r
 
 ``` js
 var Component = require("react-proxy!./Component");
-// => returns the proxied component (You can hot update it.)
+// => returns the proxied component (It loads on demand.)
 // (webpack creates an additional chunk for this component and its dependencies)
 
 var ComponentProxyMixin = require("react-proxy!./Component").Mixin;
