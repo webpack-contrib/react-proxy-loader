@@ -2,7 +2,7 @@
 
 var React = require("react");
 var C = React.createClass({
-	mixins: [require("react/lib/LinkedStateMixin"), require("react-proxy-loader/KeepStateMixin")],
+	mixins: [require("react/lib/LinkedStateMixin")],
 	getInitialState: function() {
 		return { text: "Text" };
 	},

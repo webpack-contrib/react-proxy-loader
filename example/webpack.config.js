@@ -13,9 +13,6 @@ module.exports = {
 		}
 	},
 	resolve: {
-		alias: {
-			"react-proxy-loader": path.join(__dirname, "..")
-		},
 		extensions: ["", ".jsx", ".js"]
 	},
 	module: {

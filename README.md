@@ -1,6 +1,6 @@
 # react-proxy-loader
 
-Wraps a react component in a proxy component to enable Hot Module Replacement and Code Splitting.
+Wraps a react component in a proxy component to enable Code Splitting (loads a react component and its dependencies on demand).
 
 ## installation
 
@@ -13,16 +13,13 @@ Wraps a react component in a proxy component to enable Hot Module Replacement an
 ``` js
 var Component = require("react-proxy!./Component");
 // => returns the proxied component (You can hot update it.)
-
-var Component = require("react-proxy?async!./Component");
-// => returns the proxied component (You can hot update it and it loads on demand)
 // (webpack creates an additional chunk for this component and its dependencies)
 
-var ComponentMixin = require("react-proxy?async!./Component").Mixin;
+var ComponentProxyMixin = require("react-proxy!./Component").Mixin;
 // => returns a mixin for the proxied component
 // (This allows you to setup rendering for the loading state for the proxy)
-var Component = React.createClass({
-	mixins: [ComponentMixin],
+var ComponentProxy = React.createClass({
+	mixins: [ComponentProxyMixin],
 	renderUnavailable: function() {
 		return <p>Loading...</p>;
 	}
@@ -44,16 +41,12 @@ module.exports = {
 					/\.async\.jsx$/, // select component by extension
 					"/abs/path/to/component.jsx" // absolute path to component
 				],
-				loader: "react-proxy?async"
+				loader: "react-proxy"
 			}
 		]
 	}
 };
 ```
-
-### Advanced: Keeping state between hot updates
-
-Add the `react-proxy-loader/KeepStateMixin` as mixin to the real component. It's merges the old state (before the update) with the new initial state. This way it's keep the state while hot updating. Note that this only works for the direct child. Nested components doesn't keep their state. You should design your components to be stateless anyway.
 
 # License
 

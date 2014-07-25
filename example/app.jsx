@@ -5,9 +5,9 @@ var LinkedStateMixin = require("react/lib/LinkedStateMixin");
 
 var A = require("./a");
 
-var B = require("react-proxy?!./b");
+var B = require("react-proxy!./b");
 
-var C = require("react-proxy?async!./c");
+var C = require("react-proxy!./c");
 
 var D = React.createClass({
 	mixins: [require("react-proxy?async!./d").Mixin],
