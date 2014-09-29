@@ -18,7 +18,7 @@ module.exports.pitch = function(remainingRequest) {
 		'		return ret;',
 		'	},',
 		'	_renderUnavailable: function() {',
-		'		return new ReactTextComponent("")',
+		'		return new ReactTextComponent("");',
 		'	}',
 		'};',
 		'var mixinReactProxy = require(' + JSON.stringify(require.resolve("./mixinReactProxy")) + ');',

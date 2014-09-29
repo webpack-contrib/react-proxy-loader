@@ -9,7 +9,7 @@ module.exports.pitch = function(remainingRequest) {
 		'var desc = {',
 		'	loadComponent: function(callback) {},',
 		'	_renderUnavailable: function() {',
-		'		return new ReactTextComponent("")',
+		'		return new ReactTextComponent("");',
 		'	}',
 		'};',
 		'var mixinReactProxy = require(' + JSON.stringify(require.resolve("./mixinReactProxy")) + ');',
