@@ -1,6 +1,6 @@
 {
   "name": "react-proxy-loader",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Wraps a react component in a proxy component to enable Hot Module Replacement and Code Splitting.",
   "main": "index.js",
   "directories": {
