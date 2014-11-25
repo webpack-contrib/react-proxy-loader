@@ -1,8 +1,10 @@
+// Run with "webpack-dev-server --hot --inline --colors"
+
 var path = require("path");
 var webpack = require("webpack");
 
 module.exports = {
-	entry: ["webpack/hot/dev-server", "./app"],
+	entry: "./app",
 	output: {
 		path: path.join(__dirname, "output"),
 		filename: "bundle.js"

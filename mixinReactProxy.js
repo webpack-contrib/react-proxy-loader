@@ -1,13 +1,13 @@
-module.exports = function(desc) {
+module.exports = function(React, desc) {
 	desc.displayName = "ReactProxy";
 	desc.render = function() {
 		var Component = this.state.component;
 		if(Component) {
-			return this.transferPropsTo(Component(null, this.props.children));
+			return React.createElement(Component, this.props, this.props.children);
 		} else if(this.renderUnavailable) {
-			return this.renderUnavailable()
+			return this.renderUnavailable();
 		} else {
-			return this._renderUnavailable()
+			return null;
 		}
 	};
 	desc.getInitialState = function() {

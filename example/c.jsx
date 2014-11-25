@@ -7,7 +7,6 @@ var C = React.createClass({
 		return { text: "Text" };
 	},
 	render: function() {
-		// Can be changed and updated without full page refresh
 		return (
 			<div>
 				<p>This is component C ({this.props.param}).</p>

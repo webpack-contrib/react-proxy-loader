@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 var React = require("react");
 var LinkedStateMixin = require("react/lib/LinkedStateMixin");
 
@@ -51,4 +49,4 @@ var App = React.createClass({
 	}
 });
 
-React.renderComponent(<App />, document.body);
+React.render(<App />, document.body);
