@@ -48,6 +48,67 @@ module.exports = {
 };
 ```
 
+## Asynchronous module loading with animatable routes
+
+Optionally it can be combine with [react-router](https://github.com/rackt/react-router) and React's [TransitionGroup](http://facebook.github.io/react/docs/animation.html) to animate between asynchronous loaded modules.
+
+``` js
+var React = require('react/addons');
+var Router = require('react-router');
+var CSSTransitionGroup = React.addons.CSSTransitionGroup;
+var Link = Router.Link;
+
+// when the route is triggered, it will load the module before displaying anything on the DOM
+var ComponentProxyMixin = require("react-proxy!./Component").Mixin;
+var ComponentProxy = React.createClass({
+  mixins: [ComponentProxyMixin]
+});
+
+var App = React.createClass({
+  mixins: [Router.State],
+  render: function() {
+    var activeRouteName = this.getPath() || '/';
+    // wrap the react router handler in a css transition group with a name to the css class
+    return (
+      <div>
+        <CSSTransitionGroup transitionName="fade">
+          <RouteHandler key={activeRouteName}/>
+        </CSSTransitionGroup>
+        <Link to="component">async load and animate new route</Link>
+      </div>
+    );
+  }
+});
+
+var routes = (
+  <Route handler={Main}>
+    <Route name="component" handler={ComponentProxy}/>
+  </Route>
+);
+
+Router.run(routes, 
+  function (Handler) {
+    React.render(<Handler/>, content);
+});
+```
+```css
+.fade-enter {
+  opacity: 0.01
+  transition: opacity 0.5s ease-in 1.3s
+}
+.fade-enter.fade-enter-active {
+  opacity: 1
+}
+.fade-leave {
+  opacity: 1
+  transition: opacity 1.5s ease-in
+}
+.fade-leave.fade-leave-active {
+  opacity: 0.01
+}
+```
+
+
 # License
 
 MIT (http://www.opensource.org/licenses/mit-license.php)
