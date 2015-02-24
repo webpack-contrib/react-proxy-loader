@@ -23,7 +23,7 @@ module.exports.pitch = function(remainingRequest) {
 		'    return component;',
 		'  },',
 		'};',
-		'var mixinReactProxy = require(' + JSON.stringify(require.resolve("./mixinReactAnimatableProxy")) + ');',
+		'var mixinReactProxy = require(' + JSON.stringify(require.resolve("./mixinReactProxy")) + ');',
 		'mixinReactProxy(React, desc);',
 		'module.exports = React.createClass(desc);',
 		'module.exports.Mixin = desc;'
