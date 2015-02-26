@@ -11,11 +11,12 @@ Wraps a react component in a proxy component to enable Code Splitting (loads a r
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
 
 ``` js
-var Component = require("react-proxy!./Component");
+var Component = require("react-proxy?name=componentName!./Component");
 // => returns the proxied component (It loads on demand.)
-// (webpack creates an additional chunk for this component and its dependencies)
+// (webpack creates an additional chunk for this component and its dependencies 
+giving it a name of 'componentName')
 
-var ComponentProxyMixin = require("react-proxy!./Component").Mixin;
+var ComponentProxyMixin = require("react-proxy?name=componentName!./Component").Mixin;
 // => returns a mixin for the proxied component
 // (This allows you to setup rendering for the loading state for the proxy)
 var ComponentProxy = React.createClass({

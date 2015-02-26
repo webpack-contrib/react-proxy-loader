@@ -1,7 +1,12 @@
+var loaderUtils = require("loader-utils");
+
 module.exports = function() {};
 module.exports.pitch = function(remainingRequest) {
 	this.cacheable && this.cacheable();
-	var moduleRequest = "!!" + remainingRequest;
+	var queryString = this.query || "",
+		query = loaderUtils.parseQuery(queryString),
+		moduleRequest = "!!" + remainingRequest;
+
 	return [
 		'var React = require("react");',
 		'var component;',
@@ -11,7 +16,7 @@ module.exports.pitch = function(remainingRequest) {
 		'			require.ensure([], function() {',
 		'				component = require(' + JSON.stringify(moduleRequest) + ');',
 		'				if(callback) callback(component);',
-		'			});',
+		'			}' + (query.name ? ', "' + query.name + '"' : '') + ');',
 		'		} else if(callback) callback(component);',
 		'		return component;',
 		'	},',

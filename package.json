@@ -1,6 +1,6 @@
 {
   "name": "react-proxy-loader",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Wraps a react component in a proxy component to enable Code Splitting.",
   "main": "index.js",
   "directories": {
@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/webpack/react-proxy-loader/issues"
   },
-  "homepage": "https://github.com/webpack/react-proxy-loader"
+  "homepage": "https://github.com/webpack/react-proxy-loader",
+  "dependencies": {
+    "loader-utils": "~0.2.6"
+  }
 }
