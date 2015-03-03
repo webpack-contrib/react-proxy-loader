@@ -28,6 +28,8 @@ var ComponentProxy = React.createClass({
 
 The proxy is a react component. All properties are transferred to the wrapped component.
 
+### Configuration
+
 Instead of (or in addition to) inlining the loader call you can also specify the proxied components in your configuration:
 
 ``` js
@@ -46,6 +48,14 @@ module.exports = {
 		]
 	}
 };
+```
+
+### Chunk name
+
+You can give the chunk a name with the `name` query parameter:
+
+``` js
+var Component = require("react-proxy?name=chunkName!./Component");
 ```
 
 # License
