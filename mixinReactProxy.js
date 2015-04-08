@@ -16,7 +16,9 @@ module.exports = function(React, desc) {
 	desc.componentDidMount = function() {
 		if(!this.state.component) {
 			this.loadComponent(function(component) {
-				this.setState({ component: component });
+				if(this.isMounted()) {
+					this.setState({ component: component });
+				}
 			}.bind(this));
 		}
 	};
