@@ -11,11 +11,11 @@ Wraps a react component in a proxy component to enable Code Splitting (loads a r
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
 
 ``` js
-var Component = require("react-proxy!./Component");
+var Component = require("react-proxy-loader!./Component");
 // => returns the proxied component (It loads on demand.)
 // (webpack creates an additional chunk for this component and its dependencies)
 
-var ComponentProxyMixin = require("react-proxy!./Component").Mixin;
+var ComponentProxyMixin = require("react-proxy-loader!./Component").Mixin;
 // => returns a mixin for the proxied component
 // (This allows you to setup rendering for the loading state for the proxy)
 var ComponentProxy = React.createClass({
@@ -43,7 +43,7 @@ module.exports = {
 					/\.async\.jsx$/, // select component by extension
 					"/abs/path/to/component.jsx" // absolute path to component
 				],
-				loader: "react-proxy"
+				loader: "react-proxy-loader"
 			}
 		]
 	}
@@ -55,7 +55,7 @@ module.exports = {
 You can give the chunk a name with the `name` query parameter:
 
 ``` js
-var Component = require("react-proxy?name=chunkName!./Component");
+var Component = require("react-proxy-loader?name=chunkName!./Component");
 ```
 
 # License
