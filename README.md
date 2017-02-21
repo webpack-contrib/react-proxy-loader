@@ -1,12 +1,24 @@
-# react-proxy-loader
+[![npm][npm]][npm-url]
+[![deps][deps]][deps-url]
+[![chat][chat]][chat-url]
 
-Wraps a react component in a proxy component to enable Code Splitting (loads a react component and its dependencies on demand).
+<div align="center">
+  <!-- replace with accurate logo e.g from https://worldvectorlogo.com/ -->
+  <a href="https://github.com/webpack/webpack">
+    <img width="200" height="200" vspace="" hspace="25"
+      src="https://cdn.rawgit.com/webpack/media/e7485eb2/logo/icon.svg">
+  </a>
+  <h1>React Proxy Loader</h1>
+  <p>Wraps a react component in a proxy component to enable Code Splitting (loads a react component and its dependencies on demand).<p>
+</div>
 
-## installation
+<h2 align="center">Install</h2>
 
-`npm install react-proxy-loader`
+```bash
+npm install react-proxy-loader`
+```
 
-## Usage
+<h2 align="center">Usage</h2>
 
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
 
@@ -28,7 +40,7 @@ var ComponentProxy = React.createClass({
 
 The proxy is a react component. All properties are transferred to the wrapped component.
 
-### Configuration
+<h2 align="center">Configuration</h2>
 
 Instead of (or in addition to) inlining the loader call you can also specify the proxied components in your configuration:
 
@@ -58,6 +70,45 @@ You can give the chunk a name with the `name` query parameter:
 var Component = require("react-proxy-loader?name=chunkName!./Component");
 ```
 
-# License
+<h2 align="center">Maintainers</h2>
 
-MIT (http://www.opensource.org/licenses/mit-license.php)
+<table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <img width="150" height="150"
+        src="https://avatars3.githubusercontent.com/u/166921?v=3&s=150">
+        </br>
+        <a href="https://github.com/bebraw">Juho Vepsäläinen</a>
+      </td>
+      <td align="center">
+        <img width="150" height="150"
+        src="https://avatars2.githubusercontent.com/u/8420490?v=3&s=150">
+        </br>
+        <a href="https://github.com/d3viant0ne">Joshua Wiens</a>
+      </td>
+      <td align="center">
+        <img width="150" height="150"
+        src="https://avatars3.githubusercontent.com/u/533616?v=3&s=150">
+        </br>
+        <a href="https://github.com/SpaceK33z">Kees Kluskens</a>
+      </td>
+      <td align="center">
+        <img width="150" height="150"
+        src="https://avatars3.githubusercontent.com/u/3408176?v=3&s=150">
+        </br>
+        <a href="https://github.com/TheLarkInn">Sean Larkin</a>
+      </td>
+    </tr>
+  <tbody>
+</table>
+
+
+[npm]: https://img.shields.io/npm/v/webpack-loader-seed.svg
+[npm-url]: https://npmjs.com/package/webpack-loader-seed
+
+[deps]: https://david-dm.org/webpack-contrib/webpack-loader-seed.svg
+[deps-url]: https://david-dm.org/webpack-contrib/webpack-loader-seed
+
+[chat]: https://img.shields.io/badge/gitter-webpack%2Fwebpack-brightgreen.svg
+[chat-url]: https://gitter.im/webpack/webpack
