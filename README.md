@@ -104,11 +104,11 @@ var Component = require("react-proxy-loader?name=chunkName!./Component");
 </table>
 
 
-[npm]: https://img.shields.io/npm/v/webpack-loader-seed.svg
-[npm-url]: https://npmjs.com/package/webpack-loader-seed
+[npm]: https://img.shields.io/npm/v/react-proxy-loader.svg
+[npm-url]: https://npmjs.com/package/react-proxy-loader
 
-[deps]: https://david-dm.org/webpack-contrib/webpack-loader-seed.svg
-[deps-url]: https://david-dm.org/webpack-contrib/webpack-loader-seed
+[deps]: https://david-dm.org/webpack-contrib/react-proxy-loader.svg
+[deps-url]: https://david-dm.org/webpack-contrib/react-proxy-loader
 
 [chat]: https://img.shields.io/badge/gitter-webpack%2Fwebpack-brightgreen.svg
 [chat-url]: https://gitter.im/webpack/webpack
