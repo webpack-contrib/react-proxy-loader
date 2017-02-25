@@ -32,6 +32,6 @@
   },
   "homepage": "https://github.com/webpack/react-proxy-loader",
   "dependencies": {
-    "loader-utils": "~0.2.6"
+    "loader-utils": "^1.0.2"
   }
 }
