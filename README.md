@@ -20,7 +20,7 @@ npm install react-proxy-loader`
 
 <h2 align="center">Usage</h2>
 
-[Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
+[Documentation: Using loaders](https://webpack.js.org/concepts/loaders/)
 
 ``` js
 var Component = require("react-proxy-loader!./Component");
