@@ -7,8 +7,7 @@ module.exports.pitch = function(remainingRequest) {
 		'	loadComponent: function(callback) {}',
 		'};',
 		'var mixinReactProxy = require(' + JSON.stringify(require.resolve("./mixinReactProxy")) + ');',
-		'mixinReactProxy(React, desc);',
-		'module.exports = React.createClass(desc);',
+		'module.exports = mixinReactProxy(React, desc);',
 		'module.exports.Mixin = desc;'
 	].join("\n");
 };
