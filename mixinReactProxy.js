@@ -68,7 +68,7 @@ module.exports = function MixinFactory(React, desc) {
 			};
 		})
 		
-		Object.defineProperties(ReactProxy.prototype, protoProps);
+		Object.defineProperties(ReactProxy.prototype, classProperties);
 		
 		return ReactProxy;
 	}(React.Component);
