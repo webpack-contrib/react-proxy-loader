@@ -15,7 +15,7 @@
 <h2 align="center">Install</h2>
 
 ```bash
-npm install react-proxy-loader`
+npm install react-proxy-loader
 ```
 
 <h2 align="center"><a href="https://webpack.js.org/concepts/loaders">Usage</a></h2>
