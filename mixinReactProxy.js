@@ -61,14 +61,11 @@ module.exports = function MixinFactory(React, desc) {
 			return _this;
 		}
 		
-		var classProperties = Object.keys(desc).map(function(key) {
-			return {
-				key: key,
+		Object.keys(desc).map(function(key) {
+			Object.defineProperty(ReactProxy.prototype, key, {
 				value: desc[key]
-			};
-		})
-		
-		Object.defineProperties(ReactProxy.prototype, classProperties);
+			});
+		});
 		
 		return ReactProxy;
 	}(React.Component);
