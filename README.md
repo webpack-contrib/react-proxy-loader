@@ -7,7 +7,7 @@
 [![npm][npm]][npm-url]
 [![node][node]][node-url]
 [![deps][deps]][deps-url]
-[![tests][tests]][tests-url]
+<!-- [![tests][tests]][tests-url] -->
 [![chat][chat]][chat-url]
 
 # react-proxy-loader
